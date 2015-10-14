@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Feed Me</title>
+  <meta name="author" content="Darren Holdaway">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" language="javascript" src="js/parser.js"></script>
+</head>
+
+<body>
+  <div id="w">
+    <div id="content">
+      <h1>My daily reads</h1>
+      <div id="bbctech" class="feedcontainer"></div>
+      <hr>
+      <div id="bbcsportfootball" class="feedcontainer"></div>
+      <hr>
+      <div id="technologymint" class="feedcontainer"></div>
+      <hr>
+      <div id="wiredgear" class="feedcontainer"></div>
+      <hr>
+      <div id="wiredtv" class="feedcontainer"></div>
+      <hr>
+      <div id="comicbookreviews" class="feedcontainer"></div>
+      <hr>
+      <div id="newstackoverflow" class="feedcontainer"></div>
+      <hr>
+      <div id="Comiclist-Marvel" class="feedcontainer"></div>
+      <hr>
+      <div id="Comiclist-Image" class="feedcontainer"></div>
+      <hr>
+      <div id="ComiclistBOOMThisWeek" class="feedcontainer"></div>
+      <hr>
+      <div id="DynamiteThisWeek" class="feedcontainer"></div>
+    </div><!-- @end #content -->
+  </div><!-- @end #w -->
+<script type="text/javascript">
+$(function(){
+  // running custom RSS functions
+  parseRSS('http://feeds.bbci.co.uk/news/video_and_audio/technology/rss', '#bbctech');
+  parseRSS('http://newsrss.bbc.co.uk/rss/sportplayer_uk_edition/football/rss.xml', '#bbcsportfootball');
+  parseRSS('http://feedly.com/i/subscription/feed/http://www.tecmint.com/feed/', '#technologymint')
+  parseRSS('http://www.wired.com/category/gear/feed/', '#wiredgear');
+  parseRSS('http://www.wired.com/category/underwire/feed/', '#wiredtv');
+  parseRSS('http://www.comicbookresources.com/feed.php?feed=reviews', '#comicbookreviews');
+  parseRSS('http://stackoverflow.com/feeds/tag?tagnames=linux&sort=newest', '#newstackoverflow');
+  parseRSS('http://feeds2.feedburner.com/Comiclist-Marvel', '#Comiclist-Marvel');
+  parseRSS('http://feeds.feedburner.com/ComiclistBOOMThisWeek', '#ComiclistBOOMThisWeek');
+  parseRSS('http://feeds.feedburner.com/ComiclistDynamiteThisWeek', '#DynamiteThisWeek')
+  parseRSS('http://feeds.feedburner.com/Comiclist-Image', '#Comiclist-Image')
+});
+</script>
+</body>
+</html>
